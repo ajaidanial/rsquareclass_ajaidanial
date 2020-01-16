@@ -101,3 +101,5 @@ ADMIN_USER = {
     "username": env.str("ADMIN_USERNAME", "admin@admin.com"),
     "password": env.str("ADMIN_PASSWORD", "admin"),
 }
+LOGIN_URL = "/login/"
+HOME_URL = "/home/"

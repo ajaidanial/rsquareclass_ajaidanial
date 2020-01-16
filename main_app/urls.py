@@ -3,6 +3,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # auth views
+    path("login/", views.LoginView.as_view(), name="login view"),
+    path("signup/", views.SignUpView.as_view(), name="signup view"),
+    path("home/", views.HomeView.as_view(), name="home view"),
+    path("logout/", views.logout_view, name="logout"),
     # years - CRUD
     path("years/", views.YearList.as_view(), name="years - list"),
     path("years/<int:pk>/view/", views.YearDetail.as_view(), name="year - detail"),
