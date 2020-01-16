@@ -26,4 +26,9 @@ urlpatterns = [
         name="subject - update",
     ),
     path("subjects/new/", views.SubjectCreate.as_view(), name="subject - create"),
+    # batches - CRUD
+    path("batches/", views.BatchList.as_view(), name="batches - list"),
+    path("batches/<int:pk>/view/", views.BatchDetail.as_view(), name="batch - detail"),
+    path("batches/<int:pk>/edit/", views.BatchUpdate.as_view(), name="batch - update"),
+    path("batches/new/", views.BatchCreate.as_view(), name="batch - create"),
 ]
