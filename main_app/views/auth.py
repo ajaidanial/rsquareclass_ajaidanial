@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.exceptions import NON_FIELD_ERRORS
 from django.shortcuts import redirect
@@ -8,6 +7,7 @@ from django.views.generic import FormView, TemplateView
 
 from main_app.forms import LoginForm, SignUpForm
 from main_app.helpers import LogoutRequiredMixin
+from .base import AbstractAuthenticatedView
 
 
 class LoginView(LogoutRequiredMixin, FormView):
@@ -55,7 +55,7 @@ class SignUpView(LogoutRequiredMixin, FormView):
         return super(SignUpView, self).form_valid(form)
 
 
-class HomeView(LoginRequiredMixin, TemplateView):
+class HomeView(AbstractAuthenticatedView, TemplateView):
     """Home/Dashboard View"""
 
     template_name = "main_app/auth/home.html"
