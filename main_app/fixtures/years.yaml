@@ -3,3 +3,57 @@
     fields:
         from_year: 2014
         to_year: 2015
+
+-   model: main_app.Year
+    pk: 2
+    fields:
+        from_year: 2015
+        to_year: 2016
+
+-   model: main_app.Year
+    pk: 3
+    fields:
+        from_year: 2016
+        to_year: 2017
+
+-   model: main_app.Year
+    pk: 4
+    fields:
+        from_year: 2017
+        to_year: 2018
+
+-   model: main_app.Year
+    pk: 5
+    fields:
+        from_year: 2018
+        to_year: 2019
+
+-   model: main_app.Year
+    pk: 6
+    fields:
+        from_year: 2019
+        to_year: 2020
+
+-   model: main_app.Year
+    pk: 7
+    fields:
+        from_year: 2010
+        to_year: 2011
+
+-   model: main_app.Year
+    pk: 8
+    fields:
+        from_year: 2011
+        to_year: 2012
+
+-   model: main_app.Year
+    pk: 9
+    fields:
+        from_year: 2012
+        to_year: 2013
+
+-   model: main_app.Year
+    pk: 10
+    fields:
+        from_year: 2013
+        to_year: 2014

@@ -3,3 +3,177 @@
     fields:
         name: Chemistry
         group: 1
+
+-   model: main_app.Subject
+    pk: 2
+    fields:
+        name: Biology
+        group: 1
+
+-   model: main_app.Subject
+    pk: 3
+    fields:
+        name: Mathematics
+        group: 1
+
+-   model: main_app.Subject
+    pk: 4
+    fields:
+        name: English
+        group: 1
+
+-   model: main_app.Subject
+    pk: 5
+    fields:
+        name: Hindi
+        group: 1
+
+-   model: main_app.Subject
+    pk: 6
+    fields:
+        name: Chemistry
+        group: 2
+
+-   model: main_app.Subject
+    pk: 7
+    fields:
+        name: Computer
+        group: 2
+
+-   model: main_app.Subject
+    pk: 8
+    fields:
+        name: Mathematics
+        group: 2
+
+-   model: main_app.Subject
+    pk: 9
+    fields:
+        name: English
+        group: 2
+
+-   model: main_app.Subject
+    pk: 10
+    fields:
+        name: Hindi
+        group: 2
+
+-   model: main_app.Subject
+    pk: 11
+    fields:
+        name: Accounts
+        group: 4
+
+-   model: main_app.Subject
+    pk: 12
+    fields:
+        name: Tally
+        group: 4
+
+-   model: main_app.Subject
+    pk: 13
+    fields:
+        name: Analytical Mathematics
+        group: 4
+
+-   model: main_app.Subject
+    pk: 14
+    fields:
+        name: Business English
+        group: 4
+
+-   model: main_app.Subject
+    pk: 15
+    fields:
+        name: Hindi
+        group: 4
+
+-   model: main_app.Subject
+    pk: 16
+    fields:
+        name: Chemistry
+        group: 5
+
+-   model: main_app.Subject
+    pk: 17
+    fields:
+        name: Biology
+        group: 6
+
+-   model: main_app.Subject
+    pk: 18
+    fields:
+        name: Mathematics
+        group: 7
+
+-   model: main_app.Subject
+    pk: 19
+    fields:
+        name: English
+        group: 8
+
+-   model: main_app.Subject
+    pk: 20
+    fields:
+        name: Hindi
+        group: 9
+
+-   model: main_app.Subject
+    pk: 21
+    fields:
+        name: Chemistry
+        group: 10
+
+-   model: main_app.Subject
+    pk: 22
+    fields:
+        name: Computer
+        group: 5
+
+-   model: main_app.Subject
+    pk: 23
+    fields:
+        name: Mathematics
+        group: 6
+
+-   model: main_app.Subject
+    pk: 24
+    fields:
+        name: English
+        group: 8
+
+-   model: main_app.Subject
+    pk: 25
+    fields:
+        name: Hindi
+        group: 9
+
+-   model: main_app.Subject
+    pk: 26
+    fields:
+        name: Accounts
+        group: 10
+
+-   model: main_app.Subject
+    pk: 27
+    fields:
+        name: Tally
+        group: 11
+
+-   model: main_app.Subject
+    pk: 28
+    fields:
+        name: Analytical Mathematics
+        group: 12
+
+-   model: main_app.Subject
+    pk: 29
+    fields:
+        name: Business English
+        group: 12
+
+-   model: main_app.Subject
+    pk: 30
+    fields:
+        name: Hindi
+        group: 10

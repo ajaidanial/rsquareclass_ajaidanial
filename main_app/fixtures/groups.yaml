@@ -3,3 +3,69 @@
     fields:
         standard: 12
         name: Biology
+
+-   model: main_app.Group
+    pk: 2
+    fields:
+        standard: 12
+        name: Computer Science
+
+-   model: main_app.Group
+    pk: 3
+    fields:
+        standard: 12
+        name: Fashion Tech
+
+-   model: main_app.Group
+    pk: 4
+    fields:
+        standard: 12
+        name: Commerce
+
+-   model: main_app.Group
+    pk: 5
+    fields:
+        standard: 12
+        name: Economics
+
+-   model: main_app.Group
+    pk: 6
+    fields:
+        standard: 11
+        name: Biology
+
+-   model: main_app.Group
+    pk: 7
+    fields:
+        standard: 11
+        name: Commerce
+
+-   model: main_app.Group
+    pk: 8
+    fields:
+        standard: 11
+        name: Economics
+
+-   model: main_app.Group
+    pk: 9
+    fields:
+        standard: 12
+        name: Pure Science
+
+-   model: main_app.Group
+    pk: 10
+    fields:
+        standard: 10
+        name: Social Sciences
+
+-   model: main_app.Group
+    pk: 11
+    fields:
+        standard: 10
+        name: Science
+
+-   model: main_app.Group
+    pk: 12
+    fields:
+        standard: 10
+        name: Mathematics
