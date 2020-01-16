@@ -56,7 +56,7 @@ class Subject(models.Model):
     )
 
     class Meta:
-        ordering = ["name"]
+        ordering = ["group", "name"]
 
     def get_academic_subject(self):
         # to return the full subject name
@@ -64,3 +64,18 @@ class Subject(models.Model):
 
     def __str__(self):
         return self.get_academic_subject()
+
+
+class Batch(models.Model):
+    """Model to denote the batch"""
+
+    name = models.CharField(max_length=50)
+    subjects = models.ManyToManyField(to=Subject, related_name="batches")
+    year = models.ForeignKey(to=Year, related_name="batches", on_delete=models.PROTECT)
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name_plural = "batches"
+
+    def __str__(self):
+        return self.name
