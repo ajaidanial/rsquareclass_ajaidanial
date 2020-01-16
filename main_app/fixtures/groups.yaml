@@ -1,0 +1,5 @@
+-   model: main_app.Group
+    pk: 1
+    fields:
+        standard: 12
+        name: Biology

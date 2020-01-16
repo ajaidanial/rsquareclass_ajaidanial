@@ -4,3 +4,4 @@ Werkzeug
 black
 django-extensions
 whitenoise
+PyYAML

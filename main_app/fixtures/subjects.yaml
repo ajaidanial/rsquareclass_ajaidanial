@@ -1,0 +1,5 @@
+-   model: main_app.Subject
+    pk: 1
+    fields:
+        name: Chemistry
+        group: 1

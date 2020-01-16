@@ -1,0 +1,5 @@
+-   model: main_app.Year
+    pk: 1
+    fields:
+        from_year: 2014
+        to_year: 2015
