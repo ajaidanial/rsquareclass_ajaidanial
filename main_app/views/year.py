@@ -1,4 +1,10 @@
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic import (
+    CreateView,
+    DetailView,
+    ListView,
+    UpdateView,
+    DeleteView,
+)
 
 from main_app.forms import YearForm
 from .base import AbstractAuthenticatedView
@@ -7,7 +13,7 @@ from ..models import Year
 
 class YearView(AbstractAuthenticatedView):
     form_class = YearForm
-    success_url = "."
+    success_url = "/years"
     model = Year
     queryset = Year.objects.all()
 
@@ -26,3 +32,8 @@ class YearList(YearView, ListView):
 
 class YearUpdate(YearView, UpdateView):
     template_name = "main_app/year/update.html"
+
+
+class YearDelete(YearView, DeleteView):
+    def get(self, request, *args, **kwargs):
+        return self.delete(request, *args, **kwargs)

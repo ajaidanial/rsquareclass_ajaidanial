@@ -52,7 +52,7 @@ class Subject(models.Model):
 
     name = models.CharField(max_length=50)
     group = models.ForeignKey(
-        to=Group, related_name="subjects", on_delete=models.PROTECT
+        to=Group, related_name="subjects", on_delete=models.CASCADE
     )
 
     class Meta:
@@ -71,7 +71,7 @@ class Batch(models.Model):
 
     name = models.CharField(max_length=50)
     subjects = models.ManyToManyField(to=Subject, related_name="batches")
-    year = models.ForeignKey(to=Year, related_name="batches", on_delete=models.PROTECT)
+    year = models.ForeignKey(to=Year, related_name="batches", on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["name"]
