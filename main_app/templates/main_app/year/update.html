@@ -1,4 +1,67 @@
-<form method="post">{% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Save">
-</form>
+{% extends 'main_app/main_layout.html' %}
+{% load static %}
+
+{% block main_content %}
+<div class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Years</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Agroxa</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Years</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0);">Update</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content-wrapper">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+
+                            {% if form.errors %}
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{ form.errors }}
+                            </div>
+                            {% endif %}
+
+                            <form class="form-horizontal m-t-0" method="POST">
+                                {% csrf_token %}
+
+                                <div class="form-group">
+                                    <label>From Year</label>
+                                    <input type="number" name="{{ form.from_year.name }}"
+                                        value="{% firstof form.from_year.value '' %}" class="form-control"
+                                        placeholder="Enter From Year">
+                                </div>
+                                <div class="form-group">
+                                    <label>To Year</label>
+                                    <input type="number" name="{{ form.to_year.name }}"
+                                        value="{% firstof form.to_year.value '' %}" class="form-control"
+                                        placeholder="Enter To Year">
+                                </div>
+
+                                <div class="form-group row m-t-20 mb-0">
+                                    <div class="col-12 text-right">
+                                        <button class="btn btn-primary w-md waves-effect waves-light"
+                                            type="submit">Update</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
