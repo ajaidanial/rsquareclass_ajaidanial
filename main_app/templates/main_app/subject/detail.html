@@ -1,1 +1,94 @@
-{{ object }}
+{% extends 'main_app/main_layout.html' %}
+{% load static %}
+
+{% block main_content %}
+<div class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Subjects</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Agroxa</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Subjects</a></li>
+                        <li class="breadcrumb-item active"><a
+                                href="javascript:void(0);">{{ object.get_academic_subject }}</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content-wrapper">
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-primary mini-stat position-relative">
+                        <div class="card-body">
+                            <div class="mini-stat-desc">
+                                <div class="text-white">
+                                    <h6 class="text-uppercase mt-0 text-white-50">Academic Subject</h6>
+                                    <h3 class="mb-3 mt-0">{{ object.get_academic_subject }}</h3>
+                                </div>
+                                <div class="mini-stat-icon">
+                                    <i class="mdi mdi-cube-outline display-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-info mini-stat position-relative">
+                        <div class="card-body">
+                            <div class="mini-stat-desc">
+                                <div class="text-white">
+                                    <h6 class="text-uppercase mt-0 text-white-50">Name</h6>
+                                    <h3 class="mb-3 mt-0">{{ object.name }}</h3>
+                                </div>
+                                <div class="mini-stat-icon">
+                                    <i class="mdi mdi-cube-outline display-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-warning mini-stat position-relative">
+                        <div class="card-body">
+                            <div class="mini-stat-desc">
+                                <div class="text-white">
+                                    <h6 class="text-uppercase mt-0 text-white-50">Group</h6>
+                                    <h3 class="mb-3 mt-0">{{ object.group }}</h3>
+                                </div>
+                                <div class="mini-stat-icon">
+                                    <i class="mdi mdi-cube-outline display-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-danger mini-stat position-relative">
+                        <div class="card-body">
+                            <div class="mini-stat-desc">
+                                <div class="text-white">
+                                    <h6 class="text-uppercase mt-0 text-white-50">Actions</h6>
+                                    <h3 class="mb-3 mt-0 text-uppercase">
+                                        <a class="text-white d-block" href="/subjects/{{ object.id }}/edit/">Edit</a>
+                                        <a class="text-white d-block"
+                                            href="/subjects/{{ object.id }}/delete/">Delete</a>
+                                        <a class="text-white d-block" href="/subjects/">View All</a>
+                                    </h3>
+                                </div>
+                                <div class="mini-stat-icon">
+                                    <i class="mdi mdi-cube-outline display-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
